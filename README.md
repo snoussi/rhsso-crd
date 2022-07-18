@@ -23,4 +23,4 @@ You will need:
 
 
 ## other examples
-- [](https://github.com/keycloak/keycloak-operator/tree/main/deploy/examples)
+- [https://github.com/keycloak/keycloak-operator/tree/main/deploy/examples](https://github.com/keycloak/keycloak-operator/tree/main/deploy/examples)
