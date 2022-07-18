@@ -1,0 +1,20 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: example-rhpam-ks-client
+  labels:
+    app: sso
+spec:
+  realmSelector:
+     matchLabels:
+      app: sso
+  client:
+    clientId: ks-client
+    redirectUris: 
+      - 'https://<KIE_SERVER_DOMAIN>/*'
+    directAccessGrantsEnabled: true
+    standardFlowEnabled: true
+  roles:
+    - name: kie-server
+    - name: rest-all
+    - name: Administrators

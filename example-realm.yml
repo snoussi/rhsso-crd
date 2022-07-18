@@ -1,0 +1,15 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  name: example-sso-realm
+  labels:
+    app: sso
+spec:
+  realm:
+    id: "myRealm"
+    realm: "myRealm"
+    enabled: True
+    displayName: "My Realm"
+  instanceSelector:
+    matchLabels:
+      app: sso

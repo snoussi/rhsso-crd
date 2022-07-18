@@ -1,0 +1,26 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: example-rhpam-bc-client
+  labels:
+    app: sso
+spec:
+  realmSelector:
+     matchLabels:
+      app: sso
+  client:
+    clientId: bc-client
+    redirectUris: 
+      - 'https://<BUSINESS_CENTRAL_DOMAIN>/*'
+    directAccessGrantsEnabled: true
+    standardFlowEnabled: true
+  roles:
+    - name: admin
+    - name: Administrators
+    - name: kie-server
+    - name: rest-all
+    - name: manager
+    - name: user
+    - name: analyst
+    - name: developer
+    - name: process-admin

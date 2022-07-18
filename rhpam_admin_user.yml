@@ -1,0 +1,20 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: rhpam-adnin-user
+spec:
+  user:
+    username: "pamAdmin"
+    enabled: True
+    credentials:
+      - type: "password"
+        value: "pamAdmin"
+    clientRoles:
+      bc-client:
+        - "admin"
+        - "Administrators"
+        - "kie-server"
+        - "rest-all"
+  realmSelector:
+    matchLabels:
+      app: sso

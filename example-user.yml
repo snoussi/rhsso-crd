@@ -1,0 +1,23 @@
+Name:         example-realm-user
+Namespace:    keycloak
+Labels:       app=sso
+API Version:  keycloak.org/v1alpha1
+Kind:         KeycloakUser
+Spec:
+  Realm Selector:
+    Match Labels:
+      App: sso
+  User:
+    Email:           realm_user@redhat.com
+    Credentials:
+      Type:          password
+      Value:         <user password>
+    Email Verified:  true
+    Enabled:         true
+    First Name:      John
+    Last Name:       Doe
+    Username:        realm_user
+Status:
+  Message:
+  Phase:    reconciled
+Events:     <none>
