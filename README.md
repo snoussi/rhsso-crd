@@ -13,14 +13,15 @@ You will need:
 
 ## Keycloak realm CRD
 - [example-realm.yml](example-realm.yml)
+- [pam-realm.yml](pam-realm.yml)
 
 ## Keycloak client CRD
-- [example-rhpam-bc-client.yml](example-rhpam-bc-client.yml)
-- [example-rhpam-ks-client.yml](example-rhpam-ks-client.yml)
+- [pam-bc-client.yml](pam-bc-client.yml)
+- [pam-ks-client.yml](pam-ks-client.yml)
 
 ## Keycloak user CRD
 - [example-user.yml](example-user.yml)
-
+- [pam-admin-user.yml](pam-admin-user.yml)
 
 ## other examples
 - [https://github.com/keycloak/keycloak-operator/tree/main/deploy/examples](https://github.com/keycloak/keycloak-operator/tree/main/deploy/examples)
