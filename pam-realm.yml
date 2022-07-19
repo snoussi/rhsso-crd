@@ -1,0 +1,27 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  name: pam-realm
+  labels:
+    app: sso
+spec:
+  realm:
+    id: 'pam-realm'
+    realm: 'pam-realm'
+    enabled: True
+    displayName: 'PAM Realm'
+    displayNameHtml: '<h1 style="font-size: 30px; color: #5e9ca0;">PAM Realm</h1>'
+    roles:
+      realm:
+        - name: admin
+        - name: Administrators
+        - name: kie-server
+        - name: rest-all
+        - name: manager
+        - name: user
+        - name: analyst
+        - name: developer
+        - name: process-admin
+  instanceSelector:
+    matchLabels:
+      app: sso
