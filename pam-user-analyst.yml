@@ -1,0 +1,21 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: pam-user-analyst
+spec:
+  user:
+    username: "user-analyst"
+    enabled: True
+    credentials:
+      - type: "password"
+        value: "user"
+    realmRoles:
+      - "analyst"
+    clientRoles:
+      realm-management:
+        - "view-realm"
+        - "query-users"
+        - "view-users"
+  realmSelector:
+    matchLabels:
+      app: sso

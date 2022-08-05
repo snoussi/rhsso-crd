@@ -1,0 +1,25 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: pam-user-adnin
+spec:
+  user:
+    username: "pamAdmin"
+    enabled: True
+    credentials:
+      - type: "password"
+        value: "pamAdmin"
+    realmRoles:
+      - "admin"
+      - "Administrators"
+      - "process-admin"
+      - "kie-server"
+      - "rest-all"
+    clientRoles:
+      realm-management:
+        - "view-realm"
+        - "query-users"
+        - "view-users"
+  realmSelector:
+    matchLabels:
+      app: sso

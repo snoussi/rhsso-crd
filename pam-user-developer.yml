@@ -1,20 +1,16 @@
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakUser
 metadata:
-  name: pam-adnin-user
+  name: pam-user-developer
 spec:
   user:
-    username: "pamAdmin"
+    username: "user-developer"
     enabled: True
     credentials:
       - type: "password"
-        value: "pamAdmin"
+        value: "user"
     realmRoles:
-      - "admin"
-      - "Administrators"
-      - "process-admin"
-      - "kie-server"
-      - "rest-all"
+      - "developer"
     clientRoles:
       realm-management:
         - "view-realm"

@@ -1,0 +1,16 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: pam-user-user
+spec:
+  user:
+    username: "user-user"
+    enabled: True
+    credentials:
+      - type: "password"
+        value: "user"
+    realmRoles:
+      - "user"
+  realmSelector:
+    matchLabels:
+      app: sso
