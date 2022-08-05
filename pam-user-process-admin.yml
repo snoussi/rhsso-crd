@@ -1,10 +1,10 @@
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakUser
 metadata:
-  name: pam-user-process-adnin
+  name: pam-user-process-admin
 spec:
   user:
-    username: "user-process-adnin"
+    username: "user-process-admin"
     enabled: True
     credentials:
       - type: "password"
@@ -13,6 +13,7 @@ spec:
       - "Administrators"
       - "process-admin"
       - "rest-all"
+      - "kie-server"
   realmSelector:
     matchLabels:
       app: sso

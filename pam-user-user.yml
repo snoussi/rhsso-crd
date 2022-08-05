@@ -11,6 +11,7 @@ spec:
         value: "user"
     realmRoles:
       - "user"
+      - "kie-server"      
   realmSelector:
     matchLabels:
       app: sso
